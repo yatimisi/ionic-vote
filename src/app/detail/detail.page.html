@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ item.FirstName }} {{ item.LastName }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">參選人</ion-col>
+      <ion-col>{{ item.FirstName }}{{ item.LastName }}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">年齡</ion-col>
+      <ion-col>{{ item.Age }} 歲</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">政見</ion-col>
+      <ion-col>{{ item.Politics }}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="3">目前票數</ion-col>
+        <ion-col>{{ item.Vote }}</ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-button (click)="voteAdd()">
+    投一票
+  </ion-button>
+</ion-content>
